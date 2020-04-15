@@ -81,7 +81,7 @@ class Movies extends Component {
 
     const { totalCount, data: movies } = this.getPageData();
     return (
-      <main className="container">
+      <main>
         <p className="m-3 p-1 lead">
           There are
           <span className="badge badge-dark p-2 ">{totalCount}</span> movies in

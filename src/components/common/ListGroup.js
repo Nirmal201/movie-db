@@ -9,19 +9,21 @@ const ListGroup = ({
 }) => {
   return (
     <ul className="list-group">
-      {items.map((item) => (
-        <li
-          key={item[valueProperty]}
-          className={
-            item === selectedGenre
-              ? "list-group-item active"
-              : "list-group-item "
-          }
-          onClick={() => onItemSelect(item)}
-        >
-          {item[textProperty]}
-        </li>
-      ))}
+      {items.map((item) => {
+        return (
+          <li
+            key={item[valueProperty]}
+            className={
+              item === selectedGenre
+                ? "list-group-item active"
+                : "list-group-item "
+            }
+            onClick={() => onItemSelect(item)}
+          >
+            {item[textProperty]}
+          </li>
+        );
+      })}
     </ul>
   );
 };
